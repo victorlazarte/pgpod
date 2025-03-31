@@ -5,33 +5,22 @@
       <description>Audio versions of Paul Graham's essays</description>
       <link>https://paulgraham.com</link>
       <language>en-us</language>
-      <pubDate>Mon, 31 Mar 2025 05:16:54 </pubDate>
+      <pubDate>Mon, 31 Mar 2025 05:48:24 </pubDate>
       <itunes:title>Paul Graham Essays</itunes:title>
       <itunes:author>Paul Graham</itunes:author>
       <itunes:summary>Audio versions of Paul Graham's essays</itunes:summary>
       <itunes:type>episodic</itunes:type>
       <itunes:explicit>no</itunes:explicit>
       <item>
-         <title>Greatwork</title>
-         <description>Audio version of Paul Graham's essay 'Greatwork'</description>
-         <pubDate>Mon, 31 Mar 2025 05:16:53 </pubDate>
-         <itunes:title>Greatwork</itunes:title>
+         <title>Do</title>
+         <description>Audio version of Paul Graham's essay 'Do'</description>
+         <pubDate>Mon, 31 Mar 2025 05:48:24 </pubDate>
+         <itunes:title>Do</itunes:title>
          <itunes:author>Paul Graham</itunes:author>
-         <itunes:summary>Audio version of Paul Graham's essay 'Greatwork'</itunes:summary>
+         <itunes:summary>Audio version of Paul Graham's essay 'Do'</itunes:summary>
          <itunes:episodeType>full</itunes:episodeType>
          <itunes:explicit>no</itunes:explicit>
-         <enclosure url="https://victorlazarte.github.io/pgpod/output/greatwork.mp3" type="audio/mpeg" length="32540229"/>
-      </item>
-      <item>
-         <title>Wealth</title>
-         <description>Audio version of Paul Graham's essay 'Wealth'</description>
-         <pubDate>Mon, 31 Mar 2025 05:16:54 </pubDate>
-         <itunes:title>Wealth</itunes:title>
-         <itunes:author>Paul Graham</itunes:author>
-         <itunes:summary>Audio version of Paul Graham's essay 'Wealth'</itunes:summary>
-         <itunes:episodeType>full</itunes:episodeType>
-         <itunes:explicit>no</itunes:explicit>
-         <enclosure url="https://victorlazarte.github.io/pgpod/output/wealth.mp3" type="audio/mpeg" length="24434537"/>
+         <enclosure url="https://victorlazarte.github.io/pgpod/output/do.mp3" type="audio/mpeg" length="4220986"/>
       </item>
    </channel>
 </rss>
