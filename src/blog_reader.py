@@ -293,19 +293,42 @@ def split_text_into_chunks(text: str, max_chars: int = 4000) -> list:
     
     return chunks
 
-def generate_chunk_audio(chunk: str, chunk_path: str, api_key: str, voice: str = "Sarah"):
-    """Generate audio for a single chunk using a specific API key"""
+def process_chunk(chunk, chunk_index, output_path, api_keys):
+    """Process a single chunk of text"""
     try:
-        set_api_key(api_key)
-        audio = generate(
-            text=chunk,
-            voice=voice,
-            model="eleven_monolingual_v1"
+        # Round-robin API key assignment
+        api_key = api_keys[chunk_index % len(api_keys)]
+        
+        # Create temporary file for this chunk
+        chunk_path = f"{output_path}.chunk{chunk_index}.mp3"
+        
+        # Generate audio for this chunk
+        response = requests.post(
+            "https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM",
+            headers={
+                "Accept": "audio/mpeg",
+                "Content-Type": "application/json",
+                "xi-api-key": api_key
+            },
+            json={
+                "text": chunk,
+                "model_id": "eleven_monolingual_v1",
+                "voice_settings": {
+                    "stability": 0.5,
+                    "similarity_boost": 0.5
+                }
+            }
         )
-        save(audio, chunk_path)
-        return chunk_path
+        
+        if response.status_code == 200:
+            with open(chunk_path, 'wb') as f:
+                f.write(response.content)
+            return chunk_path
+        else:
+            print(f"Error generating audio for chunk {chunk_index}: {response.status_code} - {response.text}")
+            return None
     except Exception as e:
-        print(f"Error generating audio for chunk: {str(e)}")
+        print(f"Error processing chunk {chunk_index}: {str(e)}")
         return None
 
 def generate_audio_for_text(text: str, output_path: str, api_keys: list, voice: str = "Sarah"):
@@ -380,6 +403,21 @@ def generate_audio_for_text(text: str, output_path: str, api_keys: list, voice: 
             print(f"Error renaming single chunk: {str(e)}")
             raise
 
+def generate_chunk_audio(chunk: str, chunk_path: str, api_key: str, voice: str = "Sarah"):
+    """Generate audio for a single chunk using a specific API key"""
+    try:
+        set_api_key(api_key)
+        audio = generate(
+            text=chunk,
+            voice=voice,
+            model="eleven_monolingual_v1"
+        )
+        save(audio, chunk_path)
+        return chunk_path
+    except Exception as e:
+        print(f"Error generating audio for chunk: {str(e)}")
+        return None
+
 def create_rss_feed(essays: list):
     try:
         print("\nCreating RSS feed...")
@@ -443,7 +481,7 @@ def create_rss_feed(essays: list):
         print(f"Error creating RSS feed: {str(e)}")
         raise
 
-def fetch_content(url: str, generate_audio: bool = False, api_keys: list = None):
+def fetch_content(url: str, generate_audio_flag: bool = False, api_keys: list = None):
     try:
         print(f"\nFetching {url}...")
         response = requests.get(url)
@@ -488,7 +526,7 @@ def fetch_content(url: str, generate_audio: bool = False, api_keys: list = None)
                 print(f"- {f}")
         
         # Generate audio only if requested and file doesn't exist
-        if generate_audio and not existing_file:
+        if generate_audio_flag and not existing_file:
             print(f"\nGenerating audio for {title}...")
             if not api_keys:
                 raise ValueError("No API keys provided")
@@ -522,6 +560,7 @@ def load_api_keys():
         if not key:
             break
         api_keys.append(key)
+        print(f"Loaded API key {i}: {key[:5]}...{key[-5:]}")
         i += 1
     
     # Fallback to single API key if no numbered keys found
@@ -529,6 +568,12 @@ def load_api_keys():
         key = os.getenv('ELEVENLABS_API_KEY')
         if key:
             api_keys.append(key)
+            print(f"Loaded single API key: {key[:5]}...{key[-5:]}")
+    
+    if not api_keys:
+        print("No API keys found in environment variables")
+    else:
+        print(f"Total API keys loaded: {len(api_keys)}")
     
     return api_keys
 
@@ -539,7 +584,7 @@ def recombine_chunks(output_path: str):
         chunk_files = []
         i = 1
         while True:
-            chunk_path = f"{output_path}.part{i}"
+            chunk_path = f"{output_path}.chunk{i}"
             if not os.path.exists(chunk_path):
                 break
             chunk_files.append(chunk_path)
@@ -596,8 +641,9 @@ if __name__ == "__main__":
     
     print(f"Loaded {len(api_keys)} API key(s)")
     
-    # List of essays to process
-    essays = ESSAY_URLS
+    # Process the next essay
+    next_essay = "https://paulgraham.com/woke.html"  # The Origins of Wokeness
+    essays = [next_essay]
     
     # Process each essay
     processed_essays = []
