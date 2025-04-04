@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<!-- Updated feed with all episodes -->
    <channel>
       <title>Paul Graham Essays</title>
       <description>Audio versions of Paul Graham's essays</description>
@@ -21,7 +22,7 @@ think they should tell them.)
 Most of you probably think that when you're released into the
 so-called real world you'll eventually have to get some kind of
 job. That's not true, and today I'm going to talk about a trick you
-can use to avoid ever having to get a job.
+can use to avoid ever having to get a jobs .
 The trick is to start...</description>
          <pubDate>Thu, 03 Apr 2025 23:33:00 </pubDate>
          <itunes:title>How to Start Google</itunes:title>
