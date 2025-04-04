@@ -341,7 +341,7 @@ def generate_audio_for_text(text: str, output_path: str, api_keys: list, voice: 
     
     # Generate audio for each chunk in parallel
     audio_segments = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=len(api_keys)) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         future_to_chunk = {}
         for i, chunk in enumerate(chunks, 1):
             chunk_path = f"{output_path}.part{i}"
@@ -641,9 +641,8 @@ if __name__ == "__main__":
     
     print(f"Loaded {len(api_keys)} API key(s)")
     
-    # Process the next essay
-    next_essay = "https://paulgraham.com/woke.html"  # The Origins of Wokeness
-    essays = [next_essay]
+    # Process all essays
+    essays = ESSAY_URLS
     
     # Process each essay
     processed_essays = []
