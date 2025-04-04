@@ -5,22 +5,767 @@
       <description>Audio versions of Paul Graham's essays</description>
       <link>https://paulgraham.com</link>
       <language>en-us</language>
-      <pubDate>Fri, 04 Apr 2025 05:53:28 </pubDate>
+      <pubDate>Fri, 04 Apr 2025 06:33:13 </pubDate>
       <itunes:title>Paul Graham Essays</itunes:title>
       <itunes:author>Paul Graham</itunes:author>
       <itunes:summary>Audio versions of Paul Graham's essays</itunes:summary>
       <itunes:type>episodic</itunes:type>
       <itunes:explicit>no</itunes:explicit>
       <item>
-         <title>Woke</title>
-         <description>Audio version of Paul Graham's essay 'Woke'</description>
-         <pubDate>Fri, 04 Apr 2025 05:53:28 </pubDate>
-         <itunes:title>Woke</itunes:title>
+         <title>How to Start Google</title>
+         <description>March 2024
+(This is a talk I gave to 14 and 15 year olds about what to do now
+if they might want to start a startup later. Lots of schools think
+they should tell students something about startups. This is what I
+think they should tell them.)
+Most of you probably think that when you're released into the
+so-called real world you'll eventually have to get some kind of
+job. That's not true, and today I'm going to talk about a trick you
+can use to avoid ever having to get a job.
+The trick is to start...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:00 </pubDate>
+         <itunes:title>How to Start Google</itunes:title>
          <itunes:author>Paul Graham</itunes:author>
-         <itunes:summary>Audio version of Paul Graham's essay 'Woke'</itunes:summary>
+         <itunes:summary>March 2024
+(This is a talk I gave to 14 and 15 year olds about what to do now
+if they might want to start a startup later. Lots of schools think
+they should tell students something about startups. This is what I
+think they should tell them.)
+Most of you probably think that when you're released into the
+so-called real world you'll eventually have to get some kind of
+job. That's not true, and today I'm going to talk about a trick you
+can use to avoid ever having to get a job.
+The trick is to start...</itunes:summary>
          <itunes:episodeType>full</itunes:episodeType>
          <itunes:explicit>no</itunes:explicit>
-         <enclosure url="https://victorlazarte.github.io/pgpod/output/woke.mp3" type="audio/mpeg" length="18262116"/>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/google.mp3" type="audio/mpeg" length="7279403"/>
+      </item>
+      <item>
+         <title>The Reddits</title>
+         <description>March 2024
+I met the Reddits before we even started Y Combinator. In fact they
+were one of the reasons we started it.
+YC grew out of a talk I gave to the Harvard Computer Society (the
+undergrad computer club) about how to start a startup. Everyone
+else in the audience was probably local, but Steve and Alexis came
+up on the train from the University of Virginia, where they were
+seniors. Since they'd come so far I agreed to meet them for coffee.
+They told me about the startup idea we'd later fund ...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:01 </pubDate>
+         <itunes:title>The Reddits</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>March 2024
+I met the Reddits before we even started Y Combinator. In fact they
+were one of the reasons we started it.
+YC grew out of a talk I gave to the Harvard Computer Society (the
+undergrad computer club) about how to start a startup. Everyone
+else in the audience was probably local, but Steve and Alexis came
+up on the train from the University of Virginia, where they were
+seniors. Since they'd come so far I agreed to meet them for coffee.
+They told me about the startup idea we'd later fund ...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/reddits.mp3" type="audio/mpeg" length="3056552"/>
+      </item>
+      <item>
+         <title>Is There Such a Thing as Good Taste?</title>
+         <description>November 2021
+(This essay is derived from a talk at the Cambridge Union.)
+When I was a kid, I'd have said there wasn't. My father told me so.
+Some people like some things, and other people like other things,
+and who's to say who's right?
+It seemed so obvious that there was no such thing as good taste
+that it was only through indirect evidence that I realized my father
+was wrong. And that's what I'm going to give you here: a proof by
+reductio ad absurdum. If we start from the premise that there's...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:02 </pubDate>
+         <itunes:title>Is There Such a Thing as Good Taste?</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>November 2021
+(This essay is derived from a talk at the Cambridge Union.)
+When I was a kid, I'd have said there wasn't. My father told me so.
+Some people like some things, and other people like other things,
+and who's to say who's right?
+It seemed so obvious that there was no such thing as good taste
+that it was only through indirect evidence that I realized my father
+was wrong. And that's what I'm going to give you here: a proof by
+reductio ad absurdum. If we start from the premise that there's...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/goodtaste.mp3" type="audio/mpeg" length="2924686"/>
+      </item>
+      <item>
+         <title>The Origins of Wokeness</title>
+         <description>January 2025
+The word &quot;prig&quot; isn't very common now, but if you look up
+the definition, it will sound familiar. Google's isn't bad:
+
+
+  A self-righteously moralistic person who behaves as if
+  superior to others.
+
+
+This sense of the word originated in the 18th century, and
+its age is an important clue: it shows that although
+wokeness is a comparatively recent phenomenon, it's an
+instance of a much older one.
+There's a certain kind of person who's attracted to a
+shallow, exacting kind of moral pur...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:02 </pubDate>
+         <itunes:title>The Origins of Wokeness</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>January 2025
+The word &quot;prig&quot; isn't very common now, but if you look up
+the definition, it will sound familiar. Google's isn't bad:
+
+
+  A self-righteously moralistic person who behaves as if
+  superior to others.
+
+
+This sense of the word originated in the 18th century, and
+its age is an important clue: it shows that although
+wokeness is a comparatively recent phenomenon, it's an
+instance of a much older one.
+There's a certain kind of person who's attracted to a
+shallow, exacting kind of moral pur...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/woke.mp3" type="audio/mpeg" length="18262116"/>
+      </item>
+      <item>
+         <title>Founder Mode</title>
+         <description>September 2024
+At a YC event last week Brian Chesky gave a talk that everyone who
+was there will remember. Most founders I talked to afterward said
+it was the best they'd ever heard. Ron Conway, for the first time
+in his life, forgot to take notes. I'm not going to try to reproduce
+it here. Instead I want to talk about a question it raised.
+The theme of Brian's talk was that the conventional wisdom about
+how to run larger companies is mistaken. As Airbnb grew, well-meaning
+people advised him tha...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:02 </pubDate>
+         <itunes:title>Founder Mode</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>September 2024
+At a YC event last week Brian Chesky gave a talk that everyone who
+was there will remember. Most founders I talked to afterward said
+it was the best they'd ever heard. Ron Conway, for the first time
+in his life, forgot to take notes. I'm not going to try to reproduce
+it here. Instead I want to talk about a question it raised.
+The theme of Brian's talk was that the conventional wisdom about
+how to run larger companies is mistaken. As Airbnb grew, well-meaning
+people advised him tha...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/foundermode.mp3" type="audio/mpeg" length="3337630"/>
+      </item>
+      <item>
+         <title>The Need to Read</title>
+         <description>November 2022
+In the science fiction books I read as a kid, reading had often
+been replaced by some more efficient way of acquiring knowledge.
+Mysterious &quot;tapes&quot; would load it into one's brain like a program
+being loaded into a computer.
+That sort of thing is unlikely to happen anytime soon. Not just
+because it would be hard to build a replacement for reading, but
+because even if one existed, it would be insufficient. Reading about
+x doesn't just teach you about x; it also teaches you how to wri...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:03 </pubDate>
+         <itunes:title>The Need to Read</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>November 2022
+In the science fiction books I read as a kid, reading had often
+been replaced by some more efficient way of acquiring knowledge.
+Mysterious &quot;tapes&quot; would load it into one's brain like a program
+being loaded into a computer.
+That sort of thing is unlikely to happen anytime soon. Not just
+because it would be hard to build a replacement for reading, but
+because even if one existed, it would be insufficient. Reading about
+x doesn't just teach you about x; it also teaches you how to wri...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/read.mp3" type="audio/mpeg" length="2414595"/>
+      </item>
+      <item>
+         <title>Alien Truth</title>
+         <description>October 2022
+If there were intelligent beings elsewhere in the universe, they'd
+share certain truths in common with us. The truths of mathematics
+would be the same, because they're true by definition. Ditto for
+the truths of physics; the mass of a carbon atom would be the same
+on their planet. But I think we'd share other truths with aliens
+besides the truths of math and physics, and that it would be
+worthwhile to think about what these might be.
+For example, I think we'd share the principle tha...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:04 </pubDate>
+         <itunes:title>Alien Truth</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>October 2022
+If there were intelligent beings elsewhere in the universe, they'd
+share certain truths in common with us. The truths of mathematics
+would be the same, because they're true by definition. Ditto for
+the truths of physics; the mass of a carbon atom would be the same
+on their planet. But I think we'd share other truths with aliens
+besides the truths of math and physics, and that it would be
+worthwhile to think about what these might be.
+For example, I think we'd share the principle tha...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/alien.mp3" type="audio/mpeg" length="3778396"/>
+      </item>
+      <item>
+         <title>What You (Want to)* Want</title>
+         <description>November 2022
+Since I was about 9 I've been puzzled by the apparent contradiction
+between being made of matter that behaves in a predictable way, and
+the feeling that I could choose to do whatever I wanted. At the
+time I had a self-interested motive for exploring the question. At
+that age (like most succeeding ages) I was always in trouble with
+the authorities, and it seemed to me that there might possibly be
+some way to get out of trouble by arguing that I wasn't responsible
+for my actions. I g...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:04 </pubDate>
+         <itunes:title>What You (Want to)* Want</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>November 2022
+Since I was about 9 I've been puzzled by the apparent contradiction
+between being made of matter that behaves in a predictable way, and
+the feeling that I could choose to do whatever I wanted. At the
+time I had a self-interested motive for exploring the question. At
+that age (like most succeeding ages) I was always in trouble with
+the authorities, and it seemed to me that there might possibly be
+some way to get out of trouble by arguing that I wasn't responsible
+for my actions. I g...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/want.mp3" type="audio/mpeg" length="2858467"/>
+      </item>
+      <item>
+         <title>Putting Ideas into Words</title>
+         <description>February 2022
+Writing about something, even something you know well, usually shows
+you that you didn't know it as well as you thought. Putting ideas
+into words is a severe test. The first words you choose are usually
+wrong; you have to rewrite sentences over and over 
+ to
+get them exactly right. And your ideas won't just be imprecise, but
+incomplete too. Half the ideas that end up in an essay will be ones
+you thought of while you were writing it. Indeed, that's why I write
+them.
+Once you publish...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:05 </pubDate>
+         <itunes:title>Putting Ideas into Words</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>February 2022
+Writing about something, even something you know well, usually shows
+you that you didn't know it as well as you thought. Putting ideas
+into words is a severe test. The first words you choose are usually
+wrong; you have to rewrite sentences over and over 
+ to
+get them exactly right. And your ideas won't just be imprecise, but
+incomplete too. Half the ideas that end up in an essay will be ones
+you thought of while you were writing it. Indeed, that's why I write
+them.
+Once you publish...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/words.mp3" type="audio/mpeg" length="3203465"/>
+      </item>
+      <item>
+         <title>When To Do What You Love</title>
+         <description>September 2024
+There's some debate about whether it's a good idea to &quot;follow your
+passion.&quot; In fact the question is impossible to answer with a simple
+yes or no. Sometimes you should and sometimes you shouldn't, but
+the border between should and shouldn't is very complicated. The
+only way to give a general answer is to trace it.
+When people talk about this question, there's always an implicit
+&quot;instead of.&quot; All other things being equal, why wouldn't you work
+on what interests you the most? So eve...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:05 </pubDate>
+         <itunes:title>When To Do What You Love</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>September 2024
+There's some debate about whether it's a good idea to &quot;follow your
+passion.&quot; In fact the question is impossible to answer with a simple
+yes or no. Sometimes you should and sometimes you shouldn't, but
+the border between should and shouldn't is very complicated. The
+only way to give a general answer is to trace it.
+When people talk about this question, there's always an implicit
+&quot;instead of.&quot; All other things being equal, why wouldn't you work
+on what interests you the most? So eve...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/when.mp3" type="audio/mpeg" length="4062580"/>
+      </item>
+      <item>
+         <title>What I've Learned from Users</title>
+         <description>September 2022
+I recently told applicants to Y Combinator that the best advice I
+could give for getting in, per word, was 
+
+
+  Explain what you've learned from users.
+
+
+That tests a lot of things: whether you're paying attention to
+users, how well you understand them, and even how much they need
+what you're making.
+Afterward I asked myself the same question. What have I learned
+from YC's users, the startups we've funded?
+The first thing that came to mind was that most startups have the
+same prob...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:06 </pubDate>
+         <itunes:title>What I've Learned from Users</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>September 2022
+I recently told applicants to Y Combinator that the best advice I
+could give for getting in, per word, was 
+
+
+  Explain what you've learned from users.
+
+
+That tests a lot of things: whether you're paying attention to
+users, how well you understand them, and even how much they need
+what you're making.
+Afterward I asked myself the same question. What have I learned
+from YC's users, the startups we've funded?
+The first thing that came to mind was that most startups have the
+same prob...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/users.mp3" type="audio/mpeg" length="6165123"/>
+      </item>
+      <item>
+         <title>The Best Essay</title>
+         <description>March 2024
+Despite its title this isn't meant to be the best essay. My goal
+here is to figure out what the best essay would be like.
+It would be well-written, but you can write well about any topic.
+What made it special would be what it was about.
+Obviously some topics would be better than others. It probably
+wouldn't be about this year's lipstick colors. But it wouldn't be
+vaporous talk about elevated themes either. A good essay has to be
+surprising. It has to tell people something they don't a...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:06 </pubDate>
+         <itunes:title>The Best Essay</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>March 2024
+Despite its title this isn't meant to be the best essay. My goal
+here is to figure out what the best essay would be like.
+It would be well-written, but you can write well about any topic.
+What made it special would be what it was about.
+Obviously some topics would be better than others. It probably
+wouldn't be about this year's lipstick colors. But it wouldn't be
+vaporous talk about elevated themes either. A good essay has to be
+surprising. It has to tell people something they don't a...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/best.mp3" type="audio/mpeg" length="11869639"/>
+      </item>
+      <item>
+         <title>Superlinear Returns</title>
+         <description>October 2023
+One of the most important things I didn't understand about the world
+when I was a child is the degree to which the returns for performance
+are superlinear.
+Teachers and coaches implicitly told us the returns were linear.
+&quot;You get out,&quot; I heard a thousand times, &quot;what you put in.&quot; They
+meant well, but this is rarely true. If your product is only half
+as good as your competitor's, you don't get half as many customers.
+You get no customers, and you go out of business.
+It's obviously tr...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:07 </pubDate>
+         <itunes:title>Superlinear Returns</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>October 2023
+One of the most important things I didn't understand about the world
+when I was a child is the degree to which the returns for performance
+are superlinear.
+Teachers and coaches implicitly told us the returns were linear.
+&quot;You get out,&quot; I heard a thousand times, &quot;what you put in.&quot; They
+meant well, but this is rarely true. If your product is only half
+as good as your competitor's, you don't get half as many customers.
+You get no customers, and you go out of business.
+It's obviously tr...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/superlinear.mp3" type="audio/mpeg" length="12200036"/>
+      </item>
+      <item>
+         <title>The Right Kind of Stubborn</title>
+         <description>July 2024
+Successful people tend to be persistent. New ideas often don't work
+at first, but they're not deterred. They keep trying and eventually
+find something that does.
+Mere obstinacy, on the other hand, is a recipe for failure. Obstinate
+people are so annoying. They won't listen. They beat their heads
+against a wall and get nowhere.
+But is there any real difference between these two cases? Are
+persistent and obstinate people actually behaving differently? Or
+are they doing the same thing, an...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:07 </pubDate>
+         <itunes:title>The Right Kind of Stubborn</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>July 2024
+Successful people tend to be persistent. New ideas often don't work
+at first, but they're not deterred. They keep trying and eventually
+find something that does.
+Mere obstinacy, on the other hand, is a recipe for failure. Obstinate
+people are so annoying. They won't listen. They beat their heads
+against a wall and get nowhere.
+But is there any real difference between these two cases? Are
+persistent and obstinate people actually behaving differently? Or
+are they doing the same thing, an...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/persistence.mp3" type="audio/mpeg" length="5684052"/>
+      </item>
+      <item>
+         <title>How to Do Great Work</title>
+         <description>July 2023
+If you collected lists of techniques for doing great work in a lot
+of different fields, what would the intersection look like? I decided
+to find out by making it.
+Partly my goal was to create a guide that could be used by someone
+working in any field. But I was also curious about the shape of the
+intersection. And one thing this exercise shows is that it does
+have a definite shape; it's not just a point labelled &quot;work hard.&quot;
+The following recipe assumes you're very ambitious.
+
+The firs...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:08 </pubDate>
+         <itunes:title>How to Do Great Work</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>July 2023
+If you collected lists of techniques for doing great work in a lot
+of different fields, what would the intersection look like? I decided
+to find out by making it.
+Partly my goal was to create a guide that could be used by someone
+working in any field. But I was also curious about the shape of the
+intersection. And one thing this exercise shows is that it does
+have a definite shape; it's not just a point labelled &quot;work hard.&quot;
+The following recipe assumes you're very ambitious.
+
+The firs...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/greatwork.mp3" type="audio/mpeg" length="32540229"/>
+      </item>
+      <item>
+         <title>Beyond Smart</title>
+         <description>October 2021
+If you asked people what was special about Einstein, most would say
+that he was really smart. Even the ones who tried to give you a
+more sophisticated-sounding answer would probably think this first.
+Till a few years ago I would have given the same answer myself. But
+that wasn't what was special about Einstein. What was special about
+him was that he had important new ideas. Being very smart was a
+necessary precondition for having those ideas, but the two are not
+identical.
+It may se...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:09 </pubDate>
+         <itunes:title>Beyond Smart</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>October 2021
+If you asked people what was special about Einstein, most would say
+that he was really smart. Even the ones who tried to give you a
+more sophisticated-sounding answer would probably think this first.
+Till a few years ago I would have given the same answer myself. But
+that wasn't what was special about Einstein. What was special about
+him was that he had important new ideas. Being very smart was a
+necessary precondition for having those ideas, but the two are not
+identical.
+It may se...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/smart.mp3" type="audio/mpeg" length="3998214"/>
+      </item>
+      <item>
+         <title>What to Do</title>
+         <description>March 2025
+What should one do? That may seem a strange question, but it's not
+meaningless or unanswerable. It's the sort of question kids ask
+before they learn not to ask big questions. I only came across it
+myself in the process of investigating something else. But once I
+did, I thought I should at least try to answer it.
+So what 
+should
+ one do? One should help people, and take care of
+the world. Those two are obvious. But is there anything else? When
+I ask that, the answer that pops up is 
+Ma...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:09 </pubDate>
+         <itunes:title>What to Do</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>March 2025
+What should one do? That may seem a strange question, but it's not
+meaningless or unanswerable. It's the sort of question kids ask
+before they learn not to ask big questions. I only came across it
+myself in the process of investigating something else. But once I
+did, I thought I should at least try to answer it.
+So what 
+should
+ one do? One should help people, and take care of
+the world. Those two are obvious. But is there anything else? When
+I ask that, the answer that pops up is 
+Ma...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/do.mp3" type="audio/mpeg" length="4220986"/>
+      </item>
+      <item>
+         <title>A Project of One's Own</title>
+         <description>June 2021
+A few days ago, on the way home from school, my nine year old son
+told me he couldn't wait to get home to write more of the story he
+was working on. This made me as happy as anything I've heard him
+say — not just because he was excited about his story, but because
+he'd discovered this way of working. Working on a project of your
+own is as different from ordinary work as skating is from walking.
+It's more fun, but also much more productive.
+What proportion of great work has been done by...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:10 </pubDate>
+         <itunes:title>A Project of One's Own</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>June 2021
+A few days ago, on the way home from school, my nine year old son
+told me he couldn't wait to get home to write more of the story he
+was working on. This made me as happy as anything I've heard him
+say — not just because he was excited about his story, but because
+he'd discovered this way of working. Working on a project of your
+own is as different from ordinary work as skating is from walking.
+It's more fun, but also much more productive.
+What proportion of great work has been done by...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/own.mp3" type="audio/mpeg" length="6802929"/>
+      </item>
+      <item>
+         <title>How to Make Wealth</title>
+         <description>Want to start a startup?
+  Get funded by
+
+Y Combinator
+.
+
+
+
+
+
+
+
+
+May 2004
+
+(This essay was originally published in 
+Hackers 
+&amp; Painters
+.)
+
+If you wanted to get rich, how would you do it? I think your best
+bet would be to start or join a startup.  That's been a 
+reliable way to get rich for hundreds of years.  The word &quot;startup&quot; 
+dates from the 1960s, but what happens in one is 
+very similar to the venture-backed trading voyages of the
+Middle Ages.
+Startups usually involve technology, so much so...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:10 </pubDate>
+         <itunes:title>How to Make Wealth</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>Want to start a startup?
+  Get funded by
+
+Y Combinator
+.
+
+
+
+
+
+
+
+
+May 2004
+
+(This essay was originally published in 
+Hackers 
+&amp; Painters
+.)
+
+If you wanted to get rich, how would you do it? I think your best
+bet would be to start or join a startup.  That's been a 
+reliable way to get rich for hundreds of years.  The word &quot;startup&quot; 
+dates from the 1960s, but what happens in one is 
+very similar to the venture-backed trading voyages of the
+Middle Ages.
+Startups usually involve technology, so much so...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/wealth.mp3" type="audio/mpeg" length="24434537"/>
+      </item>
+      <item>
+         <title>How to Work Hard</title>
+         <description>June 2021
+It might not seem there's much to learn about how to work hard.
+Anyone who's been to school knows what it entails, even if they
+chose not to do it. There are 12 year olds who work amazingly hard. And
+yet when I ask if I know more about working hard now than when I
+was in school, the answer is definitely yes.
+One thing I know is that if you want to do great things, you'll
+have to work very hard. I wasn't sure of that as a kid. Schoolwork
+varied in difficulty; one didn't always have to w...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:11 </pubDate>
+         <itunes:title>How to Work Hard</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>June 2021
+It might not seem there's much to learn about how to work hard.
+Anyone who's been to school knows what it entails, even if they
+chose not to do it. There are 12 year olds who work amazingly hard. And
+yet when I ask if I know more about working hard now than when I
+was in school, the answer is definitely yes.
+One thing I know is that if you want to do great things, you'll
+have to work very hard. I wasn't sure of that as a kid. Schoolwork
+varied in difficulty; one didn't always have to w...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/hwh.mp3" type="audio/mpeg" length="8680402"/>
+      </item>
+      <item>
+         <title>Writes and Write-Nots</title>
+         <description>October 2024
+I'm usually reluctant to make predictions about technology, but I
+feel fairly confident about this one: in a couple decades there
+won't be many people who can write.
+One of the strangest things you learn if you're a writer is how
+many people have trouble writing. Doctors know how many people have
+a mole they're worried about; people who are good at setting up
+computers know how many people aren't; writers know how many people
+need help writing.
+The reason so many people have trouble...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:11 </pubDate>
+         <itunes:title>Writes and Write-Nots</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>October 2024
+I'm usually reluctant to make predictions about technology, but I
+feel fairly confident about this one: in a couple decades there
+won't be many people who can write.
+One of the strangest things you learn if you're a writer is how
+many people have trouble writing. Doctors know how many people have
+a mole they're worried about; people who are good at setting up
+computers know how many people aren't; writers know how many people
+need help writing.
+The reason so many people have trouble...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/writes.mp3" type="audio/mpeg" length="3066611"/>
+      </item>
+      <item>
+         <title>Weird Languages</title>
+         <description>August 2021
+When people say that in their experience all programming languages
+are basically equivalent, they're making a statement not about
+languages but about the kind of programming they've done.
+99.5% of programming consists of gluing together calls to library
+functions. All popular languages are equally good at this. So one
+can easily spend one's whole career operating in the intersection
+of popular programming languages.
+But the other .5% of programming is disproportionately interesting.
+...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:12 </pubDate>
+         <itunes:title>Weird Languages</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>August 2021
+When people say that in their experience all programming languages
+are basically equivalent, they're making a statement not about
+languages but about the kind of programming they've done.
+99.5% of programming consists of gluing together calls to library
+functions. All popular languages are equally good at this. So one
+can easily spend one's whole career operating in the intersection
+of popular programming languages.
+But the other .5% of programming is disproportionately interesting.
+...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/weird.mp3" type="audio/mpeg" length="2113664"/>
+      </item>
+      <item>
+         <title>Heresy</title>
+         <description>April 2022
+One of the most surprising things I've witnessed in my lifetime is
+the rebirth of the concept of heresy.
+In his excellent biography of Newton, Richard Westfall writes about the
+moment when he was elected a fellow of Trinity College:
+
+
+  Supported comfortably, Newton was free to devote himself wholly
+  to whatever he chose. To remain on, he had only to avoid the three
+  unforgivable sins: crime, heresy, and marriage.
+  
+[
+1
+]
+
+
+
+The first time I read that, in the 1990s, it sounded amus...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:12 </pubDate>
+         <itunes:title>Heresy</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>April 2022
+One of the most surprising things I've witnessed in my lifetime is
+the rebirth of the concept of heresy.
+In his excellent biography of Newton, Richard Westfall writes about the
+moment when he was elected a fellow of Trinity College:
+
+
+  Supported comfortably, Newton was free to devote himself wholly
+  to whatever he chose. To remain on, he had only to avoid the three
+  unforgivable sins: crime, heresy, and marriage.
+  
+[
+1
+]
+
+
+
+The first time I read that, in the 1990s, it sounded amus...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/heresy.mp3" type="audio/mpeg" length="6220712"/>
+      </item>
+      <item>
+         <title>How to Get New Ideas</title>
+         <description>January 2023
+(
+Someone
+ fed my essays into GPT to make something that could answer
+questions based on them, then asked it where good ideas come from.  The
+answer was ok, but not what I would have said. This is what I would have said.)
+The way to get new ideas is to notice anomalies: what seems strange,
+or missing, or broken? You can see anomalies in everyday life (much
+of standup comedy is based on this), but the best place to look for
+them is at the frontiers of knowledge.
+Knowledge grows fract...</description>
+         <pubDate>Thu, 03 Apr 2025 23:33:13 </pubDate>
+         <itunes:title>How to Get New Ideas</itunes:title>
+         <itunes:author>Paul Graham</itunes:author>
+         <itunes:summary>January 2023
+(
+Someone
+ fed my essays into GPT to make something that could answer
+questions based on them, then asked it where good ideas come from.  The
+answer was ok, but not what I would have said. This is what I would have said.)
+The way to get new ideas is to notice anomalies: what seems strange,
+or missing, or broken? You can see anomalies in everyday life (much
+of standup comedy is based on this), but the best place to look for
+them is at the frontiers of knowledge.
+Knowledge grows fract...</itunes:summary>
+         <itunes:episodeType>full</itunes:episodeType>
+         <itunes:explicit>no</itunes:explicit>
+         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/getideas.mp3" type="audio/mpeg" length="833037"/>
       </item>
    </channel>
 </rss>

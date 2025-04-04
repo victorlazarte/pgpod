@@ -406,14 +406,31 @@ def generate_audio_for_text(text: str, output_path: str, api_keys: list, voice: 
 def generate_chunk_audio(chunk: str, chunk_path: str, api_key: str, voice: str = "Sarah"):
     """Generate audio for a single chunk using a specific API key"""
     try:
-        set_api_key(api_key)
-        audio = generate(
-            text=chunk,
-            voice=voice,
-            model="eleven_monolingual_v1"
+        # Make direct API call to ElevenLabs
+        response = requests.post(
+            "https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM",
+            headers={
+                "Accept": "audio/mpeg",
+                "Content-Type": "application/json",
+                "xi-api-key": api_key
+            },
+            json={
+                "text": chunk,
+                "model_id": "eleven_monolingual_v1",
+                "voice_settings": {
+                    "stability": 0.5,
+                    "similarity_boost": 0.5
+                }
+            }
         )
-        save(audio, chunk_path)
-        return chunk_path
+        
+        if response.status_code == 200:
+            with open(chunk_path, 'wb') as f:
+                f.write(response.content)
+            return chunk_path
+        else:
+            print(f"Error generating audio for chunk: {response.status_code} - {response.text}")
+            return None
     except Exception as e:
         print(f"Error generating audio for chunk: {str(e)}")
         return None
@@ -458,12 +475,12 @@ def create_rss_feed(essays: list):
             
             # Add audio file enclosure
             enclosure = ET.SubElement(item, 'enclosure')
-            github_username = os.getenv('GITHUB_USERNAME', 'victorlazarte')
-            enclosure_url = f'https://{github_username}.github.io/pgpod/{essay["audio_path"]}'
-            print(f"Setting enclosure URL for {essay['title']}: {enclosure_url}")
-            enclosure.set('url', enclosure_url)
+            enclosure.set('url', essay['audio_url'])
             enclosure.set('type', 'audio/mpeg')
-            enclosure.set('length', str(os.path.getsize(essay['audio_path'])))
+            # Get file size from local file
+            local_path = os.path.join('output', os.path.basename(essay['audio_url']))
+            if os.path.exists(local_path):
+                enclosure.set('length', str(os.path.getsize(local_path)))
         
         # Create the XML file
         xmlstr = minidom.parseString(ET.tostring(rss)).toprettyxml(indent="   ")
@@ -475,58 +492,41 @@ def create_rss_feed(essays: list):
             f.write(xmlstr)
         
         print(f"RSS feed saved successfully")
-        print(f"Feed URL: https://{github_username}.github.io/pgpod/output/feed.xml")
         
     except Exception as e:
         print(f"Error creating RSS feed: {str(e)}")
         raise
 
-def fetch_content(url: str, generate_audio_flag: bool = False, api_keys: list = None):
+def fetch_content(url: str, generate_audio: bool = False, api_keys: list = None):
     try:
         print(f"\nFetching {url}...")
         response = requests.get(url)
-        print(f"Got response with status code: {response.status_code}")
+        response.raise_for_status()
         
+        # Parse the HTML
         soup = BeautifulSoup(response.text, 'html.parser')
-        print("Parsed HTML")
         
-        # Get all text from the page
-        text = soup.get_text()
+        # Extract the title
+        title = soup.find('title').text.strip()
         
-        # Clean up the text by removing extra whitespace and newlines
-        lines = [line.strip() for line in text.splitlines() if line.strip()]
-        text = ' '.join(lines)
+        # Find the main content table
+        content_table = soup.find('table', width="435")
+        if not content_table:
+            print(f"Could not find content table in {url}")
+            return None
         
-        # Get the title from the URL
-        title = url.split('/')[-1].replace('.html', '').replace('-', ' ').title()
+        # Get all text from the table
+        text = content_table.get_text(separator='\n').strip()
         
-        print(f"\nProcessing essay: {title}")
-        print("\nFirst few lines of the essay:")
-        first_lines = text.split('.')[:3]
-        for line in first_lines:
-            print(f"- {line.strip()}.")
-            
-        # Create output directory if it doesn't exist
-        output_dir = "output"
-        os.makedirs(output_dir, exist_ok=True)
+        # Generate filename from URL
+        filename = get_essay_filename(url, title)
+        output_path = os.path.join('output', filename)
         
-        # Generate filename based on the essay title
-        audio_filename = get_essay_filename(url, title)
-        print(f"Generated filename: {audio_filename}")
-        output_path = os.path.join(output_dir, audio_filename)
-        
-        # Check if file exists (case-insensitive)
-        existing_file = find_audio_file(output_dir, audio_filename)
-        if existing_file:
-            print(f"Found existing audio file: {existing_file}")
-            output_path = existing_file
-        else:
-            print(f"Listing all files in output directory:")
-            for f in os.listdir(output_dir):
-                print(f"- {f}")
+        # Check if audio file already exists
+        existing_file = os.path.exists(output_path)
         
         # Generate audio only if requested and file doesn't exist
-        if generate_audio_flag and not existing_file:
+        if generate_audio and not existing_file:
             print(f"\nGenerating audio for {title}...")
             if not api_keys:
                 raise ValueError("No API keys provided")
@@ -534,20 +534,23 @@ def fetch_content(url: str, generate_audio_flag: bool = False, api_keys: list = 
             # Generate audio for the entire essay
             generate_audio_for_text(text, output_path, api_keys)
             print(f"\nAudio saved to: {output_path}")
-        elif existing_file:
-            print(f"Audio file already exists for {title}")
+            existing_file = True  # Update flag since we just generated the file
+        
+        # Only return essay data if audio file exists
+        if existing_file:
+            return {
+                'title': title,
+                'url': url,
+                'audio_url': f"https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/{filename}",
+                'pub_date': datetime.now().strftime('%a, %d %b %Y %H:%M:%S %z'),
+                'description': text[:500] + '...' if len(text) > 500 else text
+            }
         else:
-            print(f"Error: Audio file not found for {title}. Run with --generate-audio to create it.")
+            print(f"No audio file exists for {title}, skipping from RSS feed")
             return None
         
-        return {
-            'title': title,
-            'description': f"Audio version of Paul Graham's essay '{title}'",
-            'audio_path': output_path,
-            'pub_date': datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S %z')
-        }
     except Exception as e:
-        print(f"Error: {str(e)}")
+        print(f"Error processing {url}: {str(e)}")
         return None
 
 def load_api_keys():
@@ -633,35 +636,26 @@ if __name__ == "__main__":
     parser.add_argument('--recombine', action='store_true', help='Recombine existing audio chunks')
     args = parser.parse_args()
     
-    # Load API keys
-    api_keys = load_api_keys()
-    if args.generate_audio and not api_keys:
-        print("Error: No API keys found. Please set ELEVENLABS_API_KEY or ELEVENLABS_API_KEY_1 in your .env file")
-        exit(1)
+    # Load API keys (only needed if generating audio)
+    api_keys = load_api_keys() if args.generate_audio else []
     
-    print(f"Loaded {len(api_keys)} API key(s)")
-    
-    # Process all essays
-    essays = ESSAY_URLS
-    
-    # Process each essay
+    # Process only existing audio files
     processed_essays = []
-    for url in essays:
-        # Generate unique filename for this essay
-        audio_filename = get_essay_filename(url, url.split('/')[-1].replace('.html', '').replace('-', ' ').title())
-        output_path = os.path.join('output', audio_filename)
-        
-        # Recombine chunks if requested
-        if args.recombine:
-            if recombine_chunks(output_path):
-                print(f"Successfully recombined chunks for {url}")
-            else:
-                print(f"Failed to recombine chunks for {url}")
-                continue
-        
-        essay_data = fetch_content(url, args.generate_audio, api_keys)
-        if essay_data:
-            processed_essays.append(essay_data)
+    output_dir = "output"
+    
+    # Get all .mp3 files in the output directory
+    for filename in os.listdir(output_dir):
+        if filename.endswith('.mp3'):
+            # Extract the essay name from the filename
+            essay_name = filename.replace('.mp3', '')
+            # Find the corresponding URL in ESSAY_URLS
+            for url in ESSAY_URLS:
+                if essay_name in url:
+                    print(f"\nProcessing existing audio file: {filename}")
+                    essay_data = fetch_content(url, False, api_keys)  # Don't generate audio, just get metadata
+                    if essay_data:
+                        processed_essays.append(essay_data)
+                    break
     
     # Create RSS feed with all processed essays
     if processed_essays:
