@@ -2,16 +2,16 @@
 <!-- Last updated: 2024-04-04 12:00:00 -->
 <?xml-stylesheet type="text/xsl" href="feed.xsl"?>
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
-<!-- Updated feed with all episodes -->
+<!-- Updated feed with all episodes except the oldest -->
    <channel>
-      <title>Paul Graham Essays</title>
-      <description>Audio versions of Paul Graham's essays</description>
+      <title>Paul Graham Essays - Modern Collection</title>
+      <description>Audio versions of Paul Graham's essays - Modern collection</description>
       <link>https://paulgraham.com</link>
       <language>en-us</language>
       <pubDate>Fri, 04 Apr 2025 06:33:13 </pubDate>
-      <itunes:title>Paul Graham Essays</itunes:title>
+      <itunes:title>Paul Graham Essays - Modern Collection</itunes:title>
       <itunes:author>Paul Graham</itunes:author>
-      <itunes:summary>Audio versions of Paul Graham's essays</itunes:summary>
+      <itunes:summary>Audio versions of Paul Graham's essays - Modern collection</itunes:summary>
       <itunes:type>episodic</itunes:type>
       <itunes:explicit>no</itunes:explicit>
       <item>
@@ -547,69 +547,6 @@ What proportion of great work has been done by...</itunes:summary>
          <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/own.mp3" type="audio/mpeg" length="6802929"/>
       </item>
       <item>
-         <title>How to Make Wealth</title>
-         <description>Want to start a startup?
-  Get funded by
-
-Y Combinator
-.
-
-
-
-
-
-
-
-
-May 2004
-
-(This essay was originally published in 
-Hackers 
-&amp; Painters
-.)
-
-If you wanted to get rich, how would you do it? I think your best
-bet would be to start or join a startup.  That's been a 
-reliable way to get rich for hundreds of years.  The word &quot;startup&quot; 
-dates from the 1960s, but what happens in one is 
-very similar to the venture-backed trading voyages of the
-Middle Ages.
-Startups usually involve technology, so much so...</description>
-         <pubDate>Thu, 03 Apr 2025 23:33:10 </pubDate>
-         <itunes:title>How to Make Wealth</itunes:title>
-         <itunes:author>Paul Graham</itunes:author>
-         <itunes:summary>Want to start a startup?
-  Get funded by
-
-Y Combinator
-.
-
-
-
-
-
-
-
-
-May 2004
-
-(This essay was originally published in 
-Hackers 
-&amp; Painters
-.)
-
-If you wanted to get rich, how would you do it? I think your best
-bet would be to start or join a startup.  That's been a 
-reliable way to get rich for hundreds of years.  The word &quot;startup&quot; 
-dates from the 1960s, but what happens in one is 
-very similar to the venture-backed trading voyages of the
-Middle Ages.
-Startups usually involve technology, so much so...</itunes:summary>
-         <itunes:episodeType>full</itunes:episodeType>
-         <itunes:explicit>no</itunes:explicit>
-         <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/wealth.mp3" type="audio/mpeg" length="24434537"/>
-      </item>
-      <item>
          <title>How to Work Hard</title>
          <description>June 2021
 It might not seem there's much to learn about how to work hard.
@@ -771,4 +708,4 @@ Knowledge grows fract...</itunes:summary>
          <enclosure url="https://raw.githubusercontent.com/victorlazarte/pgpod/main/output/getideas.mp3" type="audio/mpeg" length="833037"/>
       </item>
    </channel>
-</rss>
+</rss> 
