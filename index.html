@@ -9,143 +9,233 @@
     <!-- Specifies the character encoding for the document (UTF-8 supports all Unicode characters) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Makes the page responsive by setting the viewport width to device width and initial zoom to 1.0 -->
-    <title>Test Page</title>
+    <title>PaulPod - Paul Graham's Essays in Audio</title>
     <!-- The title that appears in the browser tab -->
     <!-- Updated: April 7, 2025 -->
     <style>
-        /* CSS Custom Properties (Variables) - Makes it easy to change colors throughout the site */
+        /* Modern CSS with CSS variables for easy theming */
         :root {
-            --primary-color: #2c3e50;    /* Main text color */
-            --secondary-color: #3498db;   /* Accent color for buttons */
-            --background-color: #f8f9fa;  /* Page background color */
-            --text-color: #333;          /* Regular text color */
-            --card-background: #ffffff;   /* Card background color */
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* Universal selector - Applies to all elements */
+        /* Reset and base styles */
         * {
-            margin: 0;                    /* Removes default margins */
-            padding: 0;                   /* Removes default padding */
-            box-sizing: border-box;       /* Makes padding and border included in element's width */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Styles for the body element */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            /* System font stack - uses the best available font on the user's system */
-            line-height: 1.6;            /* Space between lines of text */
-            color: var(--text-color);    /* Text color using CSS variable */
-            background-color: var(--background-color); /* Background color using CSS variable */
-            padding: 2rem;               /* Padding around the entire page */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding: 2rem;
         }
 
-        /* Container class for centering content and setting max width */
-        .container {
-            max-width: 1200px;           /* Maximum width of the content */
-            margin: 0 auto;              /* Centers the container horizontally */
-        }
-
-        /* Header section styles */
+        /* Header styles */
         header {
-            text-align: center;          /* Centers text horizontally */
-            margin-bottom: 3rem;         /* Space below the header */
-            padding: 2rem 0;             /* Padding above and below header content */
-            border-bottom: 1px solid #eee; /* Light gray border at bottom */
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid #eee;
         }
 
-        /* Main heading style */
         h1 {
-            color: var(--primary-color); /* Color using CSS variable */
-            margin-bottom: 1rem;         /* Space below the heading */
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
-        /* Subtitle text style */
         .subtitle {
-            color: #666;                 /* Gray color for subtitle */
-            font-size: 1.2rem;           /* Slightly larger than normal text */
+            color: #666;
+            font-size: 1.2rem;
+            font-weight: normal;
         }
 
-        /* Grid container for essay cards */
-        .essays-grid {
-            display: grid;               /* Uses CSS Grid layout */
+        /* Grid layout for episodes */
+        .episodes-grid {
+            display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            /* Creates responsive grid columns that automatically adjust based on screen size */
-            gap: 2rem;                   /* Space between grid items */
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        /* Individual essay card styles */
-        .essay-card {
-            background: var(--card-background); /* White background */
-            border-radius: 8px;          /* Rounded corners */
-            padding: 1.5rem;             /* Space inside the card */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow effect */
-            transition: transform 0.2s ease; /* Smooth animation for hover effect */
+        /* Episode card styles */
+        .episode-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 1.5rem;
+            transition: transform 0.2s ease;
         }
 
-        /* Hover effect for essay cards */
-        .essay-card:hover {
-            transform: translateY(-5px);  /* Moves card up slightly on hover */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+        .episode-card:hover {
+            transform: translateY(-5px);
         }
 
-        /* Essay title style */
-        .essay-title {
-            color: var(--primary-color); /* Color using CSS variable */
-            margin-bottom: 1rem;         /* Space below the title */
-            font-size: 1.25rem;          /* Larger font size for titles */
+        .episode-title {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
         }
 
-        /* Essay date style */
-        .essay-date {
-            color: #666;                 /* Gray color for dates */
-            font-size: 0.9rem;           /* Slightly smaller than normal text */
-            margin-bottom: 1rem;         /* Space below the date */
+        .episode-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
         }
 
-        /* Essay description style */
-        .essay-description {
-            margin-bottom: 1.5rem;       /* Space below the description */
-            color: #555;                 /* Dark gray color for description */
-            font-size: 0.95rem;          /* Slightly smaller than normal text */
+        .episode-description {
+            margin-bottom: 1.5rem;
+            color: #555;
         }
 
-        /* Audio link button style */
-        .audio-link {
-            display: inline-block;       /* Allows setting width and height */
-            background-color: var(--secondary-color); /* Blue color for button */
-            color: white;                /* White text */
-            padding: 0.5rem 1rem;        /* Space inside the button */
-            border-radius: 4px;          /* Rounded corners */
-            text-decoration: none;       /* Removes underline from link */
-            font-weight: 500;            /* Medium font weight */
-            transition: background-color 0.2s ease; /* Smooth color transition */
-        }
-
-        /* Hover effect for audio link */
-        .audio-link:hover {
-            background-color: #2980b9;   /* Darker blue on hover */
-        }
-
-        /* Audio player style */
+        /* Audio player styles */
         .audio-player {
-            width: 100%;                 /* Full width */
-            margin-top: 1rem;            /* Space above the player */
+            width: 100%;
+            margin-top: 1rem;
         }
 
-        /* Media query for responsive design on smaller screens */
+        /* Responsive design */
         @media (max-width: 768px) {
             body {
-                padding: 1rem;           /* Less padding on mobile */
+                padding: 1rem;
             }
 
-            .essays-grid {
-                grid-template-columns: 1fr; /* Single column on mobile */
+            .episodes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Test Page</h1>
-    <p>If you can see this, GitHub Pages is working!</p>
+    <header>
+        <h1>PaulPod</h1>
+        <p class="subtitle">Paul Graham's Essays in Audio</p>
+    </header>
+
+    <main class="episodes-grid">
+        <!-- Episode 1 -->
+        <article class="episode-card">
+            <h2 class="episode-title">How to Start Google</h2>
+            <p class="episode-date">March 2024</p>
+            <p class="episode-description">Paul Graham discusses the early days of Google and what made it successful.</p>
+            <audio class="audio-player" controls>
+                <source src="output/google.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+
+        <!-- Episode 2 -->
+        <article class="episode-card">
+            <h2 class="episode-title">The Reddits</h2>
+            <p class="episode-date">March 2024</p>
+            <p class="episode-description">An exploration of Reddit's unique community structure and its impact on online discourse.</p>
+            <audio class="audio-player" controls>
+                <source src="output/reddits.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+
+        <!-- Episode 3 -->
+        <article class="episode-card">
+            <h2 class="episode-title">Good Taste</h2>
+            <p class="episode-date">March 2024</p>
+            <p class="episode-description">Paul Graham's thoughts on developing good taste in programming and design.</p>
+            <audio class="audio-player" controls>
+                <source src="output/goodtaste.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+
+        <!-- Episode 4 -->
+        <article class="episode-card">
+            <h2 class="episode-title">How to Get Ideas</h2>
+            <p class="episode-date">March 2024</p>
+            <p class="episode-description">A guide to generating and developing creative ideas in various fields.</p>
+            <audio class="audio-player" controls>
+                <source src="output/getideas.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+
+        <!-- Episode 5 -->
+        <article class="episode-card">
+            <h2 class="episode-title">Great Work</h2>
+            <p class="episode-date">March 2024</p>
+            <p class="episode-description">Insights into what makes work truly great and how to achieve it.</p>
+            <audio class="audio-player" controls>
+                <source src="output/greatwork.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+
+        <!-- Episode 6 -->
+        <article class="episode-card">
+            <h2 class="episode-title">How to Do Great Work</h2>
+            <p class="episode-date">March 2024</p>
+            <p class="episode-description">Practical advice on achieving excellence in your chosen field.</p>
+            <audio class="audio-player" controls>
+                <source src="output/howtogreatwork.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+
+        <!-- Episode 7 -->
+        <article class="episode-card">
+            <h2 class="episode-title">How to Do What You Love</h2>
+            <p class="episode-date">March 2024</p>
+            <p class="episode-description">Guidance on finding and pursuing work that you're passionate about.</p>
+            <audio class="audio-player" controls>
+                <source src="output/love.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+
+        <!-- Episode 8 -->
+        <article class="episode-card">
+            <h2 class="episode-title">How to Make Wealth</h2>
+            <p class="episode-date">March 2024</p>
+            <p class="episode-description">Paul Graham's perspective on creating wealth through startups and innovation.</p>
+            <audio class="audio-player" controls>
+                <source src="output/wealth.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+
+        <!-- Episode 9 -->
+        <article class="episode-card">
+            <h2 class="episode-title">How to Start a Startup</h2>
+            <p class="episode-date">March 2024</p>
+            <p class="episode-description">Essential advice for aspiring entrepreneurs on launching successful startups.</p>
+            <audio class="audio-player" controls>
+                <source src="output/startup.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+
+        <!-- Episode 10 -->
+        <article class="episode-card">
+            <h2 class="episode-title">What You'll Wish You'd Known</h2>
+            <p class="episode-date">March 2024</p>
+            <p class="episode-description">Wisdom and advice that Paul Graham wishes he had known earlier in life.</p>
+            <audio class="audio-player" controls>
+                <source src="output/wishyouknown.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </article>
+    </main>
 </body>
 </html> 
