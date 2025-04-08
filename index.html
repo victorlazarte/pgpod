@@ -1,131 +1,160 @@
 <!DOCTYPE html>
+<!-- This declares the document type and version of HTML being used -->
 <html lang="en">
+<!-- The root element of the HTML document, with language set to English -->
 <head>
+    <!-- The head section contains meta information and resources for the page -->
     <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document (UTF-8 supports all Unicode characters) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the page responsive by setting the viewport width to device width and initial zoom to 1.0 -->
     <title>Paul Graham Essays - Audio Collection</title>
+    <!-- The title that appears in the browser tab -->
     <!-- Updated: April 7, 2025 -->
     <style>
+        /* CSS Custom Properties (Variables) - Makes it easy to change colors throughout the site */
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --background-color: #f8f9fa;
-            --text-color: #333;
-            --card-background: #ffffff;
+            --primary-color: #2c3e50;    /* Main text color */
+            --secondary-color: #3498db;   /* Accent color for buttons */
+            --background-color: #f8f9fa;  /* Page background color */
+            --text-color: #333;          /* Regular text color */
+            --card-background: #ffffff;   /* Card background color */
         }
 
+        /* Universal selector - Applies to all elements */
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0;                    /* Removes default margins */
+            padding: 0;                   /* Removes default padding */
+            box-sizing: border-box;       /* Makes padding and border included in element's width */
         }
 
+        /* Styles for the body element */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            padding: 2rem;
+            /* System font stack - uses the best available font on the user's system */
+            line-height: 1.6;            /* Space between lines of text */
+            color: var(--text-color);    /* Text color using CSS variable */
+            background-color: var(--background-color); /* Background color using CSS variable */
+            padding: 2rem;               /* Padding around the entire page */
         }
 
+        /* Container class for centering content and setting max width */
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 1200px;           /* Maximum width of the content */
+            margin: 0 auto;              /* Centers the container horizontally */
         }
 
+        /* Header section styles */
         header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-            border-bottom: 1px solid #eee;
+            text-align: center;          /* Centers text horizontally */
+            margin-bottom: 3rem;         /* Space below the header */
+            padding: 2rem 0;             /* Padding above and below header content */
+            border-bottom: 1px solid #eee; /* Light gray border at bottom */
         }
 
+        /* Main heading style */
         h1 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
+            color: var(--primary-color); /* Color using CSS variable */
+            margin-bottom: 1rem;         /* Space below the heading */
         }
 
+        /* Subtitle text style */
         .subtitle {
-            color: #666;
-            font-size: 1.2rem;
+            color: #666;                 /* Gray color for subtitle */
+            font-size: 1.2rem;           /* Slightly larger than normal text */
         }
 
+        /* Grid container for essay cards */
         .essays-grid {
-            display: grid;
+            display: grid;               /* Uses CSS Grid layout */
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            /* Creates responsive grid columns that automatically adjust based on screen size */
+            gap: 2rem;                   /* Space between grid items */
         }
 
+        /* Individual essay card styles */
         .essay-card {
-            background: var(--card-background);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease;
+            background: var(--card-background); /* White background */
+            border-radius: 8px;          /* Rounded corners */
+            padding: 1.5rem;             /* Space inside the card */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow effect */
+            transition: transform 0.2s ease; /* Smooth animation for hover effect */
         }
 
+        /* Hover effect for essay cards */
         .essay-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translateY(-5px);  /* Moves card up slightly on hover */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
         }
 
+        /* Essay title style */
         .essay-title {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
+            color: var(--primary-color); /* Color using CSS variable */
+            margin-bottom: 1rem;         /* Space below the title */
+            font-size: 1.25rem;          /* Larger font size for titles */
         }
 
+        /* Essay date style */
         .essay-date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+            color: #666;                 /* Gray color for dates */
+            font-size: 0.9rem;           /* Slightly smaller than normal text */
+            margin-bottom: 1rem;         /* Space below the date */
         }
 
+        /* Essay description style */
         .essay-description {
-            margin-bottom: 1.5rem;
-            color: #555;
-            font-size: 0.95rem;
+            margin-bottom: 1.5rem;       /* Space below the description */
+            color: #555;                 /* Dark gray color for description */
+            font-size: 0.95rem;          /* Slightly smaller than normal text */
         }
 
+        /* Audio link button style */
         .audio-link {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.2s ease;
+            display: inline-block;       /* Allows setting width and height */
+            background-color: var(--secondary-color); /* Blue color for button */
+            color: white;                /* White text */
+            padding: 0.5rem 1rem;        /* Space inside the button */
+            border-radius: 4px;          /* Rounded corners */
+            text-decoration: none;       /* Removes underline from link */
+            font-weight: 500;            /* Medium font weight */
+            transition: background-color 0.2s ease; /* Smooth color transition */
         }
 
+        /* Hover effect for audio link */
         .audio-link:hover {
-            background-color: #2980b9;
+            background-color: #2980b9;   /* Darker blue on hover */
         }
 
+        /* Audio player style */
         .audio-player {
-            width: 100%;
-            margin-top: 1rem;
+            width: 100%;                 /* Full width */
+            margin-top: 1rem;            /* Space above the player */
         }
 
+        /* Media query for responsive design on smaller screens */
         @media (max-width: 768px) {
             body {
-                padding: 1rem;
+                padding: 1rem;           /* Less padding on mobile */
             }
 
             .essays-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Single column on mobile */
             }
         }
     </style>
 </head>
 <body>
+    <!-- Main container for all content -->
     <div class="container">
+        <!-- Header section with title and subtitle -->
         <header>
             <h1>Paul Graham Essays</h1>
             <p class="subtitle">Audio versions of Paul Graham's essays</p>
         </header>
 
+        <!-- Grid container for essay cards -->
         <div class="essays-grid">
+            <!-- Individual essay card -->
             <div class="essay-card">
                 <h2 class="essay-title">How to Start Google</h2>
                 <div class="essay-date">March 2024</div>
